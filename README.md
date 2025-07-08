@@ -5,7 +5,7 @@ A modern Flutter e-commerce demo app with clean architecture, SOLID principles, 
 ## Features
 
 - **Splash Screen**
-  - Custom splash screen with Tokopedia green background and logo.
+  - Custom splash screen with green background and logo.
 
 - **Product List**
   - Grid view of products with pagination (loads 10 products per page).
@@ -32,7 +32,7 @@ A modern Flutter e-commerce demo app with clean architecture, SOLID principles, 
   - "Pay Now" button shows loading dialog, then payment image, then returns to home and clears purchased items from cart.
 
 - **Theming**
-  - Tokopedia green as primary color, Google Fonts Poppins for all text.
+  - Green as primary color, Google Fonts Poppins for all text.
   - Custom launcher icon and splash logo.
 
 - **Routing**
