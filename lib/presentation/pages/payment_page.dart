@@ -99,7 +99,7 @@ class PaymentPage extends StatelessWidget {
                   }
                   if (context.mounted) {
                     Navigator.of(context).pop(); // close image
-                    context.goNamed("/");
+                    context.go('/home');
                   }
                 },
                 child: const Text(

@@ -3,6 +3,7 @@ import '../../domain/entities/product_entity.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:klontong_app/injection/injection.dart';
 import '../../data/datasources/cart_local_datasource.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final ProductEntity product;
@@ -133,7 +134,7 @@ class ProductDetailPage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // TODO: Implement buy action
+                      context.go('/home/payment', extra: [product]);
                     },
                     child: const Text(
                       'Buy',

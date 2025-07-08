@@ -148,7 +148,7 @@ class _CartPageState extends State<CartPage> {
                                               )
                                               .toList();
                                       context.go(
-                                        '/payment',
+                                        '/home/payment',
                                         extra: selectedProducts,
                                       );
                                     },

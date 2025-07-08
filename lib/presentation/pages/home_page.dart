@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'product_detail_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../bloc/product_bloc.dart';
 import '../../domain/entities/product_entity.dart';
@@ -101,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                                 return GestureDetector(
                                   onTap: () {
                                     context.go(
-                                      '/product-detail',
+                                      '/home/product-detail',
                                       extra: product,
                                     );
                                   },

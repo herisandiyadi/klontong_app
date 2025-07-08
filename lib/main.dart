@@ -22,11 +22,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [BlocProvider<ProductBloc>(create: (_) => sl<ProductBloc>())],
-      child: MaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Klontong App',
         theme: appTheme,
-        home: const SplashScreen(),
+        routerConfig: router,
       ),
     );
   }
