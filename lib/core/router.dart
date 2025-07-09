@@ -6,30 +6,26 @@ import '../presentation/pages/payment_page.dart';
 import '../../domain/entities/product_entity.dart';
 
 final router = GoRouter(
+  initialLocation: '/',
   routes: [
+    GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
     GoRoute(
-      path: '/',
-      builder: (context, state) => const SplashScreen(),
+      path: '/home',
+      builder: (context, state) => Homepage(selectedIndex: 0),
       routes: [
         GoRoute(
-          path: 'home',
-          builder: (context, state) => Homepage(selectedIndex: 0),
-          routes: [
-            GoRoute(
-              path: 'product-detail',
-              builder: (context, state) {
-                final product = state.extra as ProductEntity;
-                return ProductDetailPage(product: product);
-              },
-            ),
-            GoRoute(
-              path: 'payment',
-              builder: (context, state) {
-                final products = state.extra as List<dynamic>;
-                return PaymentPage(products: products.cast());
-              },
-            ),
-          ],
+          path: 'product-detail',
+          builder: (context, state) {
+            final product = state.extra as ProductEntity;
+            return ProductDetailPage(product: product);
+          },
+        ),
+        GoRoute(
+          path: 'payment',
+          builder: (context, state) {
+            final products = state.extra as List<dynamic>;
+            return PaymentPage(products: products.cast());
+          },
         ),
       ],
     ),
